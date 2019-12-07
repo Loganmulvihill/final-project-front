@@ -13,10 +13,10 @@ export class ApiService {
   constructor(public _http: HttpClient) { }
 
 
-  getApi () {
-    return this._http.get(`${this.baseUrl}&language=en-US&query=findingnemo&page=1&include_adult=false`) 
+  getApi (query) {
+    return this._http.get(`${this.baseUrl}&language=en-US&query=${query}&page=1&include_adult=false`) 
   }
-
+  
 
 
 

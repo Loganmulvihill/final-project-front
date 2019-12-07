@@ -7,7 +7,9 @@ import {ApiService} from '../api.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-videos;
+movies;
+input;
+imageUrl= 'https://image.tmdb.org/t/p/w500'
   constructor(public _api: ApiService) { }
 
   ngOnInit() {
@@ -16,10 +18,10 @@ videos;
 
   onClick () {
 
-    this._api.getApi() 
-    .subscribe(res => {
-      this.videos=res;
-      console.log(this.videos)
+    this._api.getApi(this.input) 
+    .subscribe(result => {
+      this.movies=result;
+      console.log(this.movies)
     })
 
 

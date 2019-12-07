@@ -1,4 +1,164 @@
-<p>main works!</p>
+<header class="header-6">
+    <div class="branding">
+        <a href="..." class="nav-link">
+            <clr-icon shape="vm-bug"></clr-icon>
+            <span class="title">Project Clarity</span>
+        </a>
+    </div>
+    <!--nav section below-->
+    
+    <div class="header-nav">
+        <a href="..." class="active nav-link"><span class="nav-text">Dashboard</span></a>
+        <a href="..." class="nav-link"><span class="nav-text">Interactive Analytics</span></a>
+    </div>
+    <div>
+    <form class="search">
+        <label for="search_input">
+            <input id="search_input" type="text" placeholder="Search for keywords...">
+        </label>
+    </form>
+    </div>
+
+    <div class="header-actions">
+        <a href="..." class="nav-link nav-text">
+            Log Out
+        </a>
+    </div>
+
+    
+  
+</header>
 
 
-<button (click)="onClick()"> Please click me! </button>
+<div class="tabs-vertical">
+    <ul id="demoTabs" class="nav" role="tablist">
+        <li role="presentation" class="nav-item">
+            <button id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Dashboard</button>
+        </li>
+        <li role="presentation" class="nav-item">
+            <button id="tab2" class="btn btn-link nav-link" aria-controls="panel2"
+                    aria-selected="false" type="button">Management</button>
+        </li>
+        <li role="presentation" class="nav-item">
+            <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">Cloud</button>
+        </li>
+    </ul>
+    <section id="panel1" role="tabpanel" aria-labelledby="tab1">
+        ...
+    </section>
+    <section id="panel2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true">
+        ...
+    </section>
+    <section id="panel3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true">
+        ...
+    </section>
+</div>
+
+
+
+
+
+<div>
+    <p>main works!</p>
+
+    <input [(ngModel)]="input"/> <br>
+
+
+
+    <button (click)="onClick()"> Please click me! </button>
+
+    <ng-container *ngIf='movies'>
+        <div *ngFor ='let movie of movies.results'>
+
+        <!-- <p>{{movie.poster_path}}</p> -->
+
+    
+        <img [src]="imageUrl + movie.poster_path">
+        <p> {{movie.title}}</p> <br>
+        <p> {{movie.release_date}}</p>
+        <p>{{movie.vote_average}}</p>
+
+        </div>
+
+
+    </ng-container>
+
+</div>
+
+
+
+
+
+<!-- <input [(ngModel)]="input"/> <br>
+<br>
+
+
+<button (click)='onClick()'> Click for videos </button>
+
+<ng-container *ngIf='videos'>
+  <div *ngFor='let item of videos?.items'>
+  <h3>{{item.snippet.title}}</h3>
+  
+
+
+
+  </ng-container> -->
+
+<!-- 
+  <clr-tabs clrLayout="vertical">
+    <clr-tab>
+        <button clrTabLink id="link1">Tab1</button>
+        <clr-tab-content id="content1" *clrIfActive>
+        ...
+        </clr-tab-content>
+    </clr-tab>
+    <clr-tab>
+        <button clrTabLink>Tab2</button>
+        <clr-tab-content *clrIfActive="true">
+        ...
+        </clr-tab-content>
+    </clr-tab>
+</clr-tabs> -->
+
+  <!-- <div class="main-container">
+    <header class="header header-6">
+        ...
+    </header>
+    <div class="content-container">
+        <nav class="sidenav">
+            <section class="sidenav-content">
+                <a href="..." class="nav-link active">
+                    Nav Element 1
+                </a>
+                <a href="..." class="nav-link">
+                    Nav Element 2
+                </a>
+                <section class="nav-group collapsible">
+                    <input id="tabexample1" type="checkbox">
+                    <label for="tabexample1">Collapsible Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                    </ul>
+                </section>
+                <section class="nav-group">
+                    <input id="tabexample2" type="checkbox">
+                    <label for="tabexample2">Default Nav Element</label>
+                    <ul class="nav-list">
+                        <li><a class="nav-link">Link 1</a></li>
+                        <li><a class="nav-link">Link 2</a></li>
+                        <li><a class="nav-link active">Link 3</a></li>
+                        <li><a class="nav-link">Link 4</a></li>
+                        <li><a class="nav-link">Link 5</a></li>
+                        <li><a class="nav-link">Link 6</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+        <div class="content-area">
+            ...
+        </div>
+    </div>
+</div> -->
