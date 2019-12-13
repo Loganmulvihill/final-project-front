@@ -14,7 +14,7 @@ export class ApiService {
   // ?language=en-US&api_key=dfe32bb528b8ce90d071c38103f1d0cb`
   genreList = `https://api.themoviedb.org/3/genre/movie/list?api_key=dfe32bb528b8ce90d071c38103f1d0cb&language=en-US`
 
-  currentGenre: []
+  // currentGenre: []
 
   constructor(public _http: HttpClient) { }
 

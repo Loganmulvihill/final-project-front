@@ -5,25 +5,24 @@
             <clr-icon shape="vm-bug"></clr-icon>
             <span class="title">Project Clarity</span>
         </a>
-    </div>
-    <!--nav section below-->
-    
-    <div class="header-nav">
+    </div> 
+    <!-- nav section below -->
+     
+     <div class="header-nav">
         <a routerLink="favorites" class="active nav-link"><span class="nav-text">Favorites</span></a>
         <a href="..." class="nav-link"><span class="nav-text">Placeholder tab</span></a>
-    </div>
+    </div> 
     <div>
-            <input [(ngModel)]="input"/>
     <form class="search">
         <label for="search_input">
             <input id="search_input" type="text" placeholder="Search for keywords...">
         </label>
     </form>
-    </div>
+    </div> 
 
-    <div class="header-actions">
+     <div class="header-actions">
             <a routerLink="login" class="active nav-link"><span class="nav-text">Log In</span></a>
-    </div>
+    </div> 
 
 
 
@@ -35,16 +34,7 @@
 
 
 <div>
-        <p>main works!</p>
-    
-        <input [(ngModel)]="input"/> <br>
-    
-    
-    
-        <button (click)="onClickGenre()"> Please click me! </button>
-        
-       
-      
+
         <div class="tabs-vertical">
                 <ul id="demoTabs" class="nav" role="tablist">
                     <li role="presentation" class="nav-item">
@@ -128,19 +118,10 @@
     
                 </ul>
 
-                <section id="panel1" role="tabpanel" aria-labelledby="tab1">
-                        ...
-                    </section>
-                    <section id="panel2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true">
-                        ...
-                    </section>
-                    <section id="panel3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true">
-                        ...
-                    </section>
 
      </div>
     
-       
+    <div>   
         <ng-container *ngIf='movies'>
             <div *ngFor ='let movie of movies.results'>
                 
@@ -176,6 +157,8 @@
 
 </div>
 
+</div>
+
 
 
 
@@ -195,102 +178,6 @@
 
 
 <!-- 
-
-
-<div class="tabs-vertical">
-    <ul id="demoTabs" class="nav" role="tablist">
-        <li role="presentation" class="nav-item">
-            <button id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
-                    aria-selected="true" type="button">Action</button>
-        </li>
-        <li role="presentation" class="nav-item">
-            <button id="tab2" class="btn btn-link nav-link" aria-controls="panel2"
-                    aria-selected="false" type="button">Adventure</button>
-        </li>
-        <li role="presentation" class="nav-item">
-            <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">Animation</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                        aria-selected="false" type="button">Comedy</button>
-            </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                        aria-selected="false" type="button">Crime</button>
-            </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                        aria-selected="false" type="button">Documentary</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                        aria-selected="false" type="button">Drama</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                        aria-selected="false" type="button">Family</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                     aria-selected="false" type="button">Fantasy</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                    <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                        aria-selected="false" type="button">History</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">Horror</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">Music</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">Mystery</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">Romance</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">Science Fiction</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">TV Movie</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">Thriller</button>
-        </li>
-        <li role="presentation" class="nav-item">
-                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">War</button>
-        </li>
-        <li role="presentation" class="nav-item">
-            <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">Western</button>
-        </li>
-    </ul>
-    <section id="panel1" role="tabpanel" aria-labelledby="tab1">
-        ...
-    </section>
-    <section id="panel2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true">
-        ...
-    </section>
-    <section id="panel3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true">
-        ...
-    </section>
-</div>
-
-
-
-
-
 <div>
     <p>main works!</p>
 
@@ -354,112 +241,3 @@
 
 
 
-
-
-
-
-        <!-- <p>{{movie.poster_path}}</p> -->
-        <!-- <div class="card-img">
-            <img [src]="imageUrl + movie.poster_path">
-        </div>
-
-        <div class="card-block">
-            <h4 class="card-title">{{movie.title}}</h4>
-            <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, aut.
-            Nihil nemo, necessitatibus earum.
-            </p>
-        </div>
-
-
-        <ul class="list-group">
-            <li class="list-group-item">{{movie.release_date}}</li>
-            <li class="list-group-item">{{movie.vote_average}}</li>
-        </ul>
-        <div class="card-footer">
-            <a href="..." class="btn btn-sm btn-link">View Details</a>
-        </div>
-    
-        </div> -->
-
-
-    <!-- </ng-container>
-    
-   
-</div> -->
-
-
-
-
-
-<!-- <input [(ngModel)]="input"/> <br>
-<br>
-
-
-<button (click)='onClick()'> Click for videos </button>
-
-<ng-container *ngIf='videos'>
-  <div *ngFor='let item of videos?.items'>
-  <h3>{{item.snippet.title}}</h3>
-  
-
-
-
-  </ng-container> -->
-
-<!-- 
-  <clr-tabs clrLayout="vertical">
-    <clr-tab>
-        <button clrTabLink id="link1">Tab1</button>
-        <clr-tab-content id="content1" *clrIfActive>
-        ...
-        </clr-tab-content>
-    </clr-tab>
-    <clr-tab>
-        <button clrTabLink>Tab2</button>
-        <clr-tab-content *clrIfActive="true">
-        ...
-        </clr-tab-content>
-    </clr-tab>
-</clr-tabs> -->
-
-  <!-- <div class="main-container">
-    <header class="header header-6">
-        ...
-    </header>
-    <div class="content-container">
-        <nav class="sidenav">
-            <section class="sidenav-content">
-                <a href="..." class="nav-link active">
-                    Nav Element 1
-                </a>
-                <a href="..." class="nav-link">
-                    Nav Element 2
-                </a>
-                <section class="nav-group collapsible">
-                    <input id="tabexample1" type="checkbox">
-                    <label for="tabexample1">Collapsible Nav Element</label>
-                    <ul class="nav-list">
-                        <li><a class="nav-link">Link 1</a></li>
-                        <li><a class="nav-link">Link 2</a></li>
-                    </ul>
-                </section>
-                <section class="nav-group">
-                    <input id="tabexample2" type="checkbox">
-                    <label for="tabexample2">Default Nav Element</label>
-                    <ul class="nav-list">
-                        <li><a class="nav-link">Link 1</a></li>
-                        <li><a class="nav-link">Link 2</a></li>
-                        <li><a class="nav-link active">Link 3</a></li>
-                        <li><a class="nav-link">Link 4</a></li>
-                        <li><a class="nav-link">Link 5</a></li>
-                        <li><a class="nav-link">Link 6</a></li>
-                    </ul>
-                </section>
-            </section>
-        </nav>
-        <div class="content-area">
-            ...
-        </div>
-    </div>
-</div> -->
