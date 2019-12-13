@@ -11,13 +11,19 @@ import { MainComponent } from './main/main.component';
 import {FormsModule} from '@angular/forms';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { UserService } from './user.service'
+import { MovieService } from './movie.service';
+import { GenresComponent } from './genres/genres.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     FavoritesComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    GenresComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService, MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

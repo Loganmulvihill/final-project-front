@@ -10,6 +10,7 @@ export class MainComponent implements OnInit {
 movies;
 input;
 imageUrl= 'https://image.tmdb.org/t/p/w500'
+genres
   constructor(public _api: ApiService) { }
 
   ngOnInit() {
@@ -27,5 +28,18 @@ imageUrl= 'https://image.tmdb.org/t/p/w500'
 
 
   }
+
+  onClickGenre (number) {
+
+    this._api.getGenre(number) 
+    .subscribe(result => {
+      this.movies=result;
+      console.log(this.movies)
+    })
+
+
+
+  }
+
 
 }

@@ -10,6 +10,12 @@ export class ApiService {
 
   `https://api.themoviedb.org/3/search/movie?api_key=dfe32bb528b8ce90d071c38103f1d0cb`
 
+  genreUrl = `https://api.themoviedb.org/3/discover/movie?api_key=dfe32bb528b8ce90d071c38103f1d0cb&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=`
+  // ?language=en-US&api_key=dfe32bb528b8ce90d071c38103f1d0cb`
+  genreList = `https://api.themoviedb.org/3/genre/movie/list?api_key=dfe32bb528b8ce90d071c38103f1d0cb&language=en-US`
+
+  currentGenre: []
+
   constructor(public _http: HttpClient) { }
 
 
@@ -18,7 +24,16 @@ export class ApiService {
   }
   
 
+ getGenre (number) {
+   return this._http.get(`${this.genreUrl}${number}`)
+ }
 
+//  getMoviesByGenre(){
+//   let genreRequest = this.genreUrl + this.genreList.genreID; 
+//   this._http.get(genreRequest).subscribe( data => {
+//       this.currentGenre = data
+//   })
+// }
 
 
 

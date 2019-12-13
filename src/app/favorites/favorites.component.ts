@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from '../movie.service'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-favorites',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoritesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _movieService: MovieService, private router: Router) { }
 
   ngOnInit() {
   }

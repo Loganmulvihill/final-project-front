@@ -1,3 +1,4 @@
+<div>
 <header class="header-6">
     <div class="branding">
         <a href="..." class="nav-link">
@@ -12,6 +13,7 @@
         <a href="..." class="nav-link"><span class="nav-text">Placeholder tab</span></a>
     </div>
     <div>
+            <input [(ngModel)]="input"/>
     <form class="search">
         <label for="search_input">
             <input id="search_input" type="text" placeholder="Search for keywords...">
@@ -27,21 +29,251 @@
 
 </header>
 
+</div>
+
 <router-outlet> </router-outlet>
+
+
+<div>
+        <p>main works!</p>
+    
+        <input [(ngModel)]="input"/> <br>
+    
+    
+    
+        <button (click)="onClickGenre()"> Please click me! </button>
+        
+       
+      
+        <div class="tabs-vertical">
+                <ul id="demoTabs" class="nav" role="tablist">
+                    <li role="presentation" class="nav-item">
+                        <button (click)= "onClickGenre(28)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                                aria-selected="true" type="button">Action</button>
+                    </li>
+                   
+                    <li role="presentation" class="nav-item">
+                        <button (click)= "onClickGenre(12)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                                aria-selected="true" type="button">Adventure</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(16)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Animation</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(35)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Comedy</button>
+                    </li>  
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(80)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Crime</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(99)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Documentary</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(18)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Drama</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(10751)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Family</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(14)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Fantasy</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(36)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">History</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(27)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Horror</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(10402)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Music</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(9648)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Mystery</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(10749)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Romance</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(878)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Science Fiction</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(10770)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">TV Movie</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(53)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">Thriller</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                    <button (click)= "onClickGenre(10752)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                    aria-selected="true" type="button">War</button>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                            <button (click)= "onClickGenre(37)" id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
+                            aria-selected="true" type="button">Western</button>
+                    </li>
+
+    
+                </ul>
+
+                <section id="panel1" role="tabpanel" aria-labelledby="tab1">
+                        ...
+                    </section>
+                    <section id="panel2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true">
+                        ...
+                    </section>
+                    <section id="panel3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true">
+                        ...
+                    </section>
+
+     </div>
+    
+       
+        <ng-container *ngIf='movies'>
+            <div *ngFor ='let movie of movies.results'>
+                
+    
+                    <div class="clr-row">
+                        <div class = "clr-col">
+                            <div class="clr-col-lg-2 clr-col-12">
+                                            
+                                        
+                                <div class="card">
+                                    <div class="card-block">
+                                            <div class="card-img">
+                                                    <img [src]="imageUrl + movie.poster_path">
+                                                </div>
+                                        <h3 class="card-title">{{movie.title}}</h3>
+                                        <p class="card-text">
+                                        Filler for description
+                                        </p>
+                                    </div>
+                                    <ul class="list-group">
+                                            <li class="list-group-item">{{movie.release_date}}</li>
+                                            <li class="list-group-item">{{movie.vote_average}}</li>
+                                        </ul>
+                                        <div class="card-footer">
+                                            <a href="..." class="btn btn-sm btn-link">View Details</a>
+                                        </div>
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</ng-container>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
 
 <div class="tabs-vertical">
     <ul id="demoTabs" class="nav" role="tablist">
         <li role="presentation" class="nav-item">
             <button id="tab1" class="btn btn-link nav-link active" aria-controls="panel1"
-                    aria-selected="true" type="button">Dashboard</button>
+                    aria-selected="true" type="button">Action</button>
         </li>
         <li role="presentation" class="nav-item">
             <button id="tab2" class="btn btn-link nav-link" aria-controls="panel2"
-                    aria-selected="false" type="button">Management</button>
+                    aria-selected="false" type="button">Adventure</button>
         </li>
         <li role="presentation" class="nav-item">
             <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
-                    aria-selected="false" type="button">Cloud</button>
+                    aria-selected="false" type="button">Animation</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                        aria-selected="false" type="button">Comedy</button>
+            </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                        aria-selected="false" type="button">Crime</button>
+            </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                        aria-selected="false" type="button">Documentary</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                        aria-selected="false" type="button">Drama</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                        aria-selected="false" type="button">Family</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                     aria-selected="false" type="button">Fantasy</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                    <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                        aria-selected="false" type="button">History</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">Horror</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">Music</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">Mystery</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">Romance</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">Science Fiction</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">TV Movie</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">Thriller</button>
+        </li>
+        <li role="presentation" class="nav-item">
+                <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">War</button>
+        </li>
+        <li role="presentation" class="nav-item">
+            <button id="tab3" class="btn btn-link nav-link" aria-controls="panel3"
+                    aria-selected="false" type="button">Western</button>
         </li>
     </ul>
     <section id="panel1" role="tabpanel" aria-labelledby="tab1">
@@ -67,12 +299,67 @@
 
 
     <button (click)="onClick()"> Please click me! </button>
+    
+   
+  
 
+
+
+
+   
     <ng-container *ngIf='movies'>
         <div *ngFor ='let movie of movies.results'>
+            
+
+                <div class="clr-row">
+                    <div class = "clr-col">
+                        <div class="clr-col-lg-2 clr-col-12">
+                                        
+                                    
+                            <div class="card">
+                                <div class="card-block">
+                                        <div class="card-img">
+                                                <img [src]="imageUrl + movie.poster_path">
+                                            </div>
+                                    <h3 class="card-title">{{movie.title}}</h3>
+                                    <p class="card-text">
+                                    Filler for description
+                                    </p>
+                                </div>
+                                <ul class="list-group">
+                                        <li class="list-group-item">{{movie.release_date}}</li>
+                                        <li class="list-group-item">{{movie.vote_average}}</li>
+                                    </ul>
+                                    <div class="card-footer">
+                                        <a href="..." class="btn btn-sm btn-link">View Details</a>
+                                    </div>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- <p>{{movie.poster_path}}</p> -->
-        <div class="card-img">
+        <!-- <div class="card-img">
             <img [src]="imageUrl + movie.poster_path">
         </div>
 
@@ -93,12 +380,13 @@
             <a href="..." class="btn btn-sm btn-link">View Details</a>
         </div>
     
-        </div>
+        </div> -->
 
 
-    </ng-container>
-
-</div>
+    <!-- </ng-container>
+    
+   
+</div> -->
 
 
 
