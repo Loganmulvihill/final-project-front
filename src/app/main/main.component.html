@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
 <header class="header-6">
     <div class="branding">
         <a href="..." class="nav-link">
@@ -6,9 +6,9 @@
             <span class="title">Project Clarity</span>
         </a>
     </div> 
-    <!-- nav section below -->
+     nav section below -->
      
-     <div class="header-nav">
+     <!-- <div class="header-nav">
         <a routerLink="favorites" class="active nav-link"><span class="nav-text">Favorites</span></a>
         <a href="..." class="nav-link"><span class="nav-text">Placeholder tab</span></a>
     </div> 
@@ -28,12 +28,38 @@
 
 </header>
 
-</div>
+</div> --> 
 
-<!-- <router-outlet> </router-outlet> -->
+<!-- <ng-container *ngIf='movies'>
+        <div *ngFor ='let movie of movies.results'> -->
+
+<!-- <div class="flex-grid-thirds">
+        <div class="col">movie.title</div> -->
+        <!-- <div class="col">This little piggy stayed home.</div>
+        <div class="col">This little piggy had roast beef.</div>
+        <div class="col">This guy is awesome</div>
+        <div class="col">This guy is awesome</div>
+        <div class="col">This guy is awesome</div>
+        <div class="col">This guy is awesome</div>
+        <div class="col">This guy is awesome</div>
+        <div class="col">This guy is awesome</div>
+        <div class="col">This guy is awesome</div>
+        <div class="col">This guy is awesome</div>
+        <div class="col">This guy is awesome</div> -->
+
+      <!-- </div>
+
+ 
+        </div>
+        <ng-container> -->
 
 
-<div>
+
+
+
+
+
+<div class="tabs-container">
 
         <div class="tabs-vertical">
                 <ul id="demoTabs" class="nav" role="tablist">
@@ -119,17 +145,33 @@
                 </ul>
 
 
-     </div>
+     
     
-    <div>   
-        <ng-container *ngIf='movies'>
-            <div *ngFor ='let movie of movies.results'>
+       
+        <div  class="clr-row" *ngIf='movies'>
+            <div  class="clr-col-4" *ngFor ='let movie of movies.results'>
                 
-    
-                    <div class="clr-row">
-                        <div class = "clr-col">
-                            <div class="clr-col-lg-2 clr-col-12">
-                                            
+
+
+                    <!-- <div class="movie-area"> -->
+                            <div class="single-movie">
+                                    <img [src]="imageUrl + movie.poster_path">
+                                    {{movie.title}}
+                                   
+                                </div>
+
+                               
+                         
+                    
+                          <!-- </div> -->
+                    
+                     
+            </div>
+<!--                   
+                    <div class="flex-grid-thirds">
+                      
+                            <div class="col">
+                                   
                                         
                                 <div class="card">
                                     <div class="card-block">
@@ -151,9 +193,10 @@
                                  </div>
                                 </div>
                             </div>
+                             </div> -->
+                        <!-- </div>
+                         --> 
                         </div>
-                    </div>
-</ng-container>
 
 </div>
 

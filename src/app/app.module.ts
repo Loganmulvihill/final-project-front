@@ -14,7 +14,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UserService } from './user.service'
 import { MovieService } from './movie.service';
-import { GenresComponent } from './genres/genres.component'
+import { GenresComponent } from './genres/genres.component';
+import { NavComponent } from './nav/nav.component';
+import { MovieDisplayComponent } from './movie-display/movie-display.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { GenresComponent } from './genres/genres.component'
     FavoritesComponent,
     LoginComponent,
     RegisterComponent,
-    GenresComponent
+    GenresComponent,
+    NavComponent,
+    MovieDisplayComponent
   ],
   imports: [
     BrowserModule,

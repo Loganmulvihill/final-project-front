@@ -9,16 +9,20 @@ import { Router } from '@angular/router'
 })
 export class RegisterComponent implements OnInit {
 
+  
+form = {
+  firstName:" ",
+  lastName:" ",
+  email:" ",
+  password: " "
+  }
+
   constructor(private _userService: UserService, private router: Router) { }
 
   ngOnInit() {
   }
 
-form = {
-firstName:'',
-lastName:'',
-email:''
-}
+
 
 
 
