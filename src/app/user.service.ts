@@ -6,8 +6,10 @@ import { HttpClient } from '@angular/common/http'
 })
 export class UserService {
 
-  baseUrl: string = "http://localhost:3000/api"; 
-  appUserUrl: string = "appUsers/"
+  baseUrl: string = "http://localhost:3000/api/"; 
+  appUserUrl: string = "appUsers/" 
+  // May have to put / on appusers the end if not working
+  loginUrl: string = "appUsers/login"
   
   isLoggedIn : boolean = false;
   firstName: string = '';
@@ -16,6 +18,10 @@ export class UserService {
 
   registerUser(userCredentials){
     return this._http.post(`${this.baseUrl}${this.appUserUrl}`, userCredentials);
+  }
+
+  loginUser(userCredentials) {
+    return this._http.post(`${this.baseUrl}${this.loginUrl}`, userCredentials);
   }
 
 }

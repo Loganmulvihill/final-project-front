@@ -29,13 +29,17 @@ padding:0;
  // } 
 
   .single-movie {
+      background-color: rgb(8, 162, 201);
       width: 100%;
       height: auto;
+      border: 1px solid whitesmoke;
+      border-radius: 25px;
+      justify-content: space-around;
 
   }
 
   img {
-    width: 80px;
+    width: 125px;
   }
   
   // .col-sm-6.col-md-4.col-lg-3.col-xs-6 {

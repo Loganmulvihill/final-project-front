@@ -155,9 +155,19 @@
 
                     <!-- <div class="movie-area"> -->
                             <div class="single-movie">
+                                    <div class="card-block">
                                     <img [src]="imageUrl + movie.poster_path">
-                                    {{movie.title}}
-                                   
+                                    <!-- <div class="card-title"> -->
+                                            {{movie.title}}
+                                        <!-- </div> -->
+                                        <ul class="list">
+                                    <li> Release Date: {{movie.release_date}}</li>
+                                    <li> Movie Rating: {{movie.vote_average}}</li>
+                                    </ul>
+                                   </div>
+                                   <div class="card-footer">
+                                        <a class="btn btn-primary">Make Favorite</a>
+                                    </div>
                                 </div>
 
                                

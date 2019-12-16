@@ -14,8 +14,8 @@ form = {
   firstName:" ",
   lastName:" ",
   email:" ",
-  password: " "
-  }
+  password: " ",
+  };
 
   constructor(private _userService: UserService, private router: Router) { }
 
@@ -38,7 +38,7 @@ signUp(){
 }
 
 goToDash(){
-  this.router.navigate(['/home'])
+  this.router.navigate(['/main'])
 }
 
 }
