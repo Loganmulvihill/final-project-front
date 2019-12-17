@@ -7,7 +7,7 @@ import {ApiService} from '../api.service';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-
+query;
 movies;
 input;
 imageUrl= 'https://image.tmdb.org/t/p/w500'
@@ -18,17 +18,12 @@ genres
   ngOnInit() {
   }
 
-
-  onClick () {
-
-    this._api.getApi(this.input) 
-    .subscribe(result => {
-      this.movies=result;
-      console.log(this.movies)
-    })
-
+  search() {
+    console.log(this.query)
+    this._api.getApi(this.query)
 
 
   }
+
 
 }

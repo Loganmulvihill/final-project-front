@@ -175,35 +175,35 @@
 
  -->
 
-        <div  class="clr-row" *ngIf='movies'>
-            <div  class="clr-col-4" *ngFor ='let movie of movies.results'>
-                
+ <div  class="clr-row" *ngIf='_api.movies'>
+        <div  class="clr-col-4" *ngFor ='let movie of _api.movies.results'>
+            
 
 
-                    <!-- <div class="movie-area"> -->
-                            <div class="single-movie">
-                                    <div class="card-block">
-                                    <img [src]="imageUrl + movie.poster_path">
-                                    <!-- <div class="card-title"> -->
-                                            {{movie.title}}
-                                        <!-- </div> -->
-                                        <ul class="list">
-                                    <li> Release Date: {{movie.release_date}}</li>
-                                    <li> Movie Rating: {{movie.vote_average}}</li>
-                                    </ul>
-                                   </div>
-                                   <div class="card-footer">
-                                        <a class="btn btn-primary">Make Favorite</a>
-                                    </div>
+                <!-- <div class="movie-area"> -->
+                        <div class="single-movie">
+                                <div class="card-block">
+                                <img [src]="imageUrl + movie.poster_path">
+                                <!-- <div class="card-title"> -->
+                                        {{movie.title}}
+                                    <!-- </div> -->
+                                    <ul class="list">
+                                <li> Release Date: {{movie.release_date}}</li>
+                                <li> Movie Rating: {{movie.vote_average}}</li>
+                                </ul>
+                               </div>
+                               <div class="card-footer">
+                                    <a class="btn btn-primary">Make Favorite</a>
                                 </div>
+                            </div>
 
-                               
-                         
-                    
-                          <!-- </div> -->
-                    
+                           
                      
-            </div>
+                
+                      <!-- </div> -->
+                
+                 
+        </div>
 <!--                   
                     <div class="flex-grid-thirds">
                       

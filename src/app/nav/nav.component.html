@@ -15,11 +15,12 @@
                 <!-- <a href="..." class="nav-link"><span class="nav-text">Placeholder tab</span></a> -->
             </div> 
             <div>
-            <form class="search">
+            <!-- <form class="search"> -->
                 <label for="search_input">
-                    <input id="search_input" type="text" placeholder="Search for keywords...">
+                    <input [(ngModel)]="query" id="search_input" type="text" placeholder="Search for keywords...">
+                    <button (click)="search()"> Please click me! </button>
                 </label>
-            </form>
+            <!-- </form> -->
             </div> 
         
 

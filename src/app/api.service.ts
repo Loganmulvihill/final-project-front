@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http'
   providedIn: 'root'
 })
 export class ApiService {
+  movies;
   baseUrl =
 
   `https://api.themoviedb.org/3/search/movie?api_key=dfe32bb528b8ce90d071c38103f1d0cb`
@@ -20,13 +21,29 @@ export class ApiService {
 
 
   getApi (query) {
-    return this._http.get(`${this.baseUrl}&language=en-US&query=${query}&page=1&include_adult=false`) 
+    console.log("api query:", query)
+      this._http.get(`${this.baseUrl}&language=en-US&query=${query}&page=1&include_adult=false`)   
+      .subscribe(result => {
+        this.movies=result;
+        console.log(this.movies)
+      })
   }
+}
   
 
- getGenre (number) {
-   return this._http.get(`${this.genreUrl}${number}`)
- }
+//  getGenre (number) {
+//    return this._http.get(`${this.genreUrl}${number}`)
+//  }
+
+ 
+
+ 
+
+
+
+// }
+
+
 
 //  getMoviesByGenre(){
 //   let genreRequest = this.genreUrl + this.genreList.genreID; 
@@ -38,4 +55,4 @@ export class ApiService {
 
 
 
-}
+// }
