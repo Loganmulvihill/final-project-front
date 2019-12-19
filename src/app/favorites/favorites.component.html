@@ -1,1 +1,26 @@
 <h1>Check out your favorites below!</h1>
+
+
+<div  class="clr-row" *ngIf='_api.movies'>
+        <!-- <div  class="clr-col-4" *ngFor ='let movie of _api.movies.results'></div> -->
+                <div  class="clr-col-4" *ngFor ='let movie of _movieService?.movies'>
+
+
+                
+                        <div class="single-movie">
+                                <div class="card-block">
+                                <img [src]="imageUrl + movie.poster_path">
+                                        {{movie.title}}
+                                    <ul class="list">
+                                <li> Release Date: {{movie.release_date}}</li>
+                                <li> Movie Rating: {{movie.vote_average}}</li>
+                                </ul>
+                               </div>
+                               <div class="card-footer">
+                                    <a class="btn btn-primary">Make Favorite</a>
+                                </div>
+                            </div>
+
+        </div>
+
+        </div>

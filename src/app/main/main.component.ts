@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../api.service';
+import { Router } from '@angular/router'
+import {MovieService} from '../movie.service'
 
 @Component({
   selector: 'app-main',
@@ -10,8 +12,7 @@ export class MainComponent implements OnInit {
 movies;
 input;
 imageUrl='https://image.tmdb.org/t/p/w500'
-genres
-  constructor(public _api: ApiService) { }
+  constructor(public _api: ApiService, private router: Router, private _movie: MovieService) { }
 
   ngOnInit() {
   }
@@ -26,20 +27,32 @@ genres
   //   })
 
 
+  addMovie(movie){
+    this._movie.addFavorites(movie).subscribe( (res: any) => {
+      console.log(res)
 
+    // console.log(movie)
+    })
+
+
+    // this.goTofavorites();
+  
+}
+
+// goTofavorites() {
+//   this.router.navigate(['/favorites'])
+
+// }
+
+  
+
+  onClickGenre (number) {
+
+    this._api.getGenre(number) 
+  
   }
 
-  // onClickGenre (number) {
-
-  //   this._api.getGenre(number) 
-  //   .subscribe(result => {
-  //     this.movies=result;
-  //     console.log(this.movies)
-  //   })
-
-
-
-  // }
+}
 
 
 
